@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLC Sønderborg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>:root { --accent: #1D9E75; --accent-soft: rgba(29,158,117,0.25); }</style>
+</head>
+<body>
+
+<nav class="shelf" aria-label="Hovedmenu">
+  <a class="logo" href="index.html">PLC</a>
+  <a class="spine s-forside" href="index.html">Forside</a>
+  <a class="spine s-laeremidler" href="laeremidler.html">Læremidler</a>
+  <a class="spine s-vejledninger" href="vejledninger.html">Vejledninger</a>
+  <a class="spine s-arkiv" href="arkiv.html">Arkiv</a>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="kicker" id="a-tag">Artikel</span>
+  <h1 class="display" id="a-title">Indlæser …</h1>
+  <p class="lede" id="a-intro"></p>
+</header>
+
+<section class="block">
+  <div class="block-head">
+    <span class="num">⭐</span>
+    <h2 id="a-sub">Det kan I gøre</h2>
+  </div>
+  <ul class="steps" id="a-steps"></ul>
+  <p style="margin-top:34px;">
+    <a href="#" id="a-back" class="bigbtn">← Tilbage</a>
+  </p>
+</section>
+
+</div>
+
+<footer>
+  <div class="cols">
+    <div>
+      <h4>PLC Sønderborg</h4>
+      <a href="index.html">Forside</a>
+      <a href="laeremidler.html">Læremidler</a>
+      <a href="vejledninger.html">Vejledninger</a>
+      <a href="arkiv.html">Arkiv</a>
+    </div>
+    <div>
+      <h4>Genveje</h4>
+      <a href="https://www.aula.dk"><span class="dot" style="background:#1D9E75"></span>Aula</a>
+      <a href="https://kviklogin.dk"><span class="dot" style="background:#D85A30"></span>Kviklogin</a>
+      <a href="https://app.meebook.com"><span class="dot" style="background:#534AB7"></span>MeeBook</a>
+    </div>
+    <div>
+      <h4>Bibliotek</h4>
+      <a href="https://ereolen.dk"><span class="dot" style="background:#BA7517"></span>eReolen</a>
+      <a href="https://nota.dk"><span class="dot" style="background:#D4537E"></span>Nota</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+var DATA = {
+  fodbold: { tag: "Bevægelse", c: "#1D9E75", back: "index.html", title: "Lær med fodbold",
+    intro: "Fodbold er fuld af tal, historier og holdarbejde. Brug det i timen!",
+    steps: ["Tæl mål og lav regnestykker med dem.", "Skriv en historie om din yndlingsspiller.", "Lav jeres egen turnering i frikvarteret."] },
+  medier: { tag: "Digital", c: "#534AB7", back: "index.html", title: "Gem dine ting",
+    intro: "Skal du skifte skole? Husk at gemme dine videoer og opgaver først.",
+    steps: ["Lav en liste over det, du vil gemme.", "Hent dine videoer ned fra Skoletube.", "Bed en voksen om hjælp, hvis noget driller."] },
+  paapas: { tag: "På nettet", c: "#A32D2D", back: "index.html", title: "Pas på på nettet",
+    intro: "Nettet er sjovt, men ikke alt er ægte. Snak om det i klassen.",
+    steps: ["Spørg: hvem har lavet det her, og hvorfor?", "Fortæl en voksen, hvis noget gør dig utryg.", "Vær lige så sød på nettet som i skolegården."] },
+  lego: { tag: "Byg & design", c: "#D85A30", back: "index.html", title: "Byg med LEGO",
+    intro: "Først en idé, så en tegning, så bygger du. Som en rigtig designer!",
+    steps: ["Tegn din idé på papir først.", "Byg den med klodser.", "Vis den til klassen og fortæl om den."] },
+  miljo: { tag: "Natur", c: "#639922", back: "index.html", title: "Kend miljømærkerne",
+    intro: "Små mærker på varerne fortæller, om de er gode ved naturen.",
+    steps: ["Find tre mærker hjemme i køkkenet.", "Tegn dit eget miljømærke.", "Snak om: hvad gør varen god for naturen?"] },
+  cykel: { tag: "Trafik", c: "#185FA5", back: "index.html", title: "Sikker på cyklen",
+    intro: "Hjelm på, hænder ud, øjne op. Så er du klar til vejen.",
+    steps: ["Tjek din cykel: lys, bremser, ringeklokke.", "Øv håndtegn i skolegården.", "Tag cyklistprøven med din klasse."] },
+  mad: { tag: "Mad", c: "#D4537E", back: "index.html", title: "Smag på Norden",
+    intro: "Hvad spiser børn i Norge, Sverige og Island? Smag jer frem!",
+    steps: ["Vælg et nordisk land og find en ret.", "Lav retten sammen i madkundskab.", "Giv retten stjerner: hvor godt smagte den?"] },
+  festival: { tag: "Naturfag", c: "#0F6E56", back: "index.html", title: "Naturfagsfestival",
+    intro: "En hel uge med forsøg, opdagelser og sjove eksperimenter.",
+    steps: ["Vælg et forsøg, du gerne vil vise frem.", "Øv dig, til du kan forklare det.", "Vis det til de andre klasser på festivalen."] },
+  ai: { tag: "Dansk + AI", c: "#7F77DD", back: "index.html", title: "Tegn med AI",
+    intro: "Beskriv en person med ord — og se computeren tegne dem!",
+    steps: ["Skriv hvordan din figur ser ud.", "Lad AI tegne den, og se om den ramte.", "Snak om: hvad kunne computeren ikke forstå?"] },
+  eksamen: { tag: "Teknik", c: "#888780", back: "index.html", title: "Når computeren driller",
+    intro: "Ingen lyd? Intet net? Her er hjælpen, trin for trin.",
+    steps: ["Prøv først: sluk og tænd igen.", "Tjek at ledninger og høretelefoner sidder fast.", "Hent en voksen, hvis det stadig driller."] },
+  indskoling: { tag: "0.–3. klasse", c: "#1D9E75", back: "laeremidler.html", title: "Indskoling",
+    intro: "Bøger og spil til dig, der lige er begyndt i skole.",
+    steps: ["Letlæsningsbøger med store bogstaver.", "Talspil der gør matematik sjov.", "Spørg på læringscentret — vi hjælper dig!"] },
+  mellemtrin: { tag: "4.–6. klasse", c: "#185FA5", back: "laeremidler.html", title: "Mellemtrin",
+    intro: "Spændende romaner og forsøgskasser til de mellemste klasser.",
+    steps: ["Romaner om venskab, magi og mod.", "Forsøgskasser med rigtige eksperimenter.", "Temaforløb om alt fra rummet til vikinger."] },
+  udskoling: { tag: "7.–9. klasse", c: "#534AB7", back: "laeremidler.html", title: "Udskoling",
+    intro: "Materialer til de store — også når prøverne nærmer sig.",
+    steps: ["Bøger der tager dig alvorligt.", "Hjælp til prøver og fremlæggelser.", "Forløb om identitet og samfund."] },
+  klasse10: { tag: "10. klasse", c: "#993556", back: "laeremidler.html", title: "10. klasse",
+    intro: "Det ekstra år: bliv klogere på dig selv og din fremtid.",
+    steps: ["Brobygning: prøv en uddannelse af.", "Materialer der gør dig klar til næste skridt.", "Snak med os om, hvad du drømmer om."] },
+  valgfag: { tag: "Valgfag", c: "#BA7517", back: "laeremidler.html", title: "Valgfag",
+    intro: "Mad, musik, billeder og håndværk — vælg det, du brænder for.",
+    steps: ["Madkundskab: lav mad der smager godt.", "Musik og billedkunst: skab noget selv.", "Håndværk og design: byg med dine hænder."] },
+  klassesaet: { tag: "Booking", c: "#D85A30", back: "laeremidler.html", title: "Klassesæt",
+    intro: "Hele klassen kan læse den samme bog — vi har sættene klar.",
+    steps: ["Læreren booker sættet hos os.", "Bøgerne kommer ud til jeres klasse.", "Husk at aflevere dem pænt tilbage."] },
+  vidensby: { tag: "Eksternt", c: "#0F6E56", back: "laeremidler.html", title: "Vidensby",
+    intro: "Besøg virksomheder og steder i Sønderborg og lær på en ny måde.",
+    steps: ["Klassen vælger et besøg sammen.", "I tager ud og oplever det i virkeligheden.", "Bagefter fortæller I, hvad I lærte."] },
+  ultrabit: { tag: "Teknologi", c: "#7F77DD", back: "laeremidler.html", title: "Ultra:bit",
+    intro: "En lille computer, du selv kan kode. Lyset blinker, når DU siger til!",
+    steps: ["Lån et micro:bit-sæt gennem skolen.", "Kod den til at vise dit navn.", "Byg noget vildt: et spil, en robot, en alarm."] },
+  skolebordet: { tag: "Grundsystem", c: "#534AB7", back: "vejledninger.html", title: "Skolebordet",
+    intro: "Din indgang til alle skolens programmer — ét login, så er du i gang.",
+    steps: ["Log ind med dit Uni-login.", "Find dine apps på forsiden.", "Spørg din lærer, hvis du mangler en app."] },
+  meebook: { tag: "Planer", c: "#185FA5", back: "vejledninger.html", title: "MeeBook",
+    intro: "Her ser du, hvad I skal lave i timerne — og afleverer dine opgaver.",
+    steps: ["Tjek din ugeplan hver mandag.", "Aflever opgaver direkte i forløbet.", "Se din lærers kommentarer bagefter."] },
+  skoletube: { tag: "Medier", c: "#D85A30", back: "vejledninger.html", title: "Skoletube",
+    intro: "Lav film, musik og podcasts — og del dem sikkert med klassen.",
+    steps: ["Vælg et værktøj, fx video eller lyd.", "Lav din produktion og gem den i din kanal.", "Del den med din lærer eller klasse."] },
+  hjaelpemidler: { tag: "Hjælp", c: "#0F6E56", back: "vejledninger.html", title: "Hjælp til læsning",
+    intro: "Computeren kan læse højt for dig og hjælpe dig med at stave.",
+    steps: ["Tænd oplæsning, så teksten bliver læst højt.", "Brug ordforslag, når du skriver.", "Det er smart — ikke snyd!"] },
+  andre: { tag: "Øvrige", c: "#888780", back: "vejledninger.html", title: "Andre værktøjer",
+    intro: "Små guides til resten af værktøjskassen, samlet ét sted.",
+    steps: ["Kig listen igennem.", "Følg guiden trin for trin.", "Spørg læringscentret, hvis du går i stå."] }
+};
+
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var id = params.get("id");
+  var fag = params.get("fag");
+  var e = DATA[id];
+  if (!e && fag) {
+    e = { tag: "Fag", c: "#1D9E75", back: "arkiv.html", title: fag,
+      intro: "Her samler vi alle forløb og materialer til " + fag.toLowerCase() + ".",
+      steps: ["Siden er på vej — der kommer mere snart.", "Spørg læringscentret, hvis du skal bruge noget nu.", "Kig forbi igen senere!"] };
+  }
+  if (!e) {
+    e = { tag: "Ups", c: "#888780", back: "index.html", title: "Siden er på vej",
+      intro: "Vi bygger stadig på denne side. Kig forbi igen snart!",
+      steps: ["Gå tilbage til forsiden.", "Prøv et af de andre kort.", "Spørg læringscentret, hvis du skal bruge noget nu."] };
+  }
+  document.title = e.title + " — PLC Sønderborg";
+  document.documentElement.style.setProperty("--accent", e.c);
+  document.getElementById("a-tag").textContent = e.tag;
+  document.getElementById("a-title").textContent = e.title;
+  document.getElementById("a-intro").textContent = e.intro;
+  var ul = document.getElementById("a-steps");
+  e.steps.forEach(function (s, i) {
+    var li = document.createElement("li");
+    li.style.setProperty("--c", e.c);
+    li.innerHTML = "<b>" + (i + 1) + ".</b> " + s;
+    ul.appendChild(li);
+  });
+  var back = document.getElementById("a-back");
+  back.href = e.back;
+  back.style.setProperty("--c", e.c);
+})();
+</script>
+</body>
+</html>

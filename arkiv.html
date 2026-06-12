@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arkiv — PLC Sønderborg</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>:root { --accent: #BA7517; --accent-soft: rgba(186,117,23,0.25); }</style>
+</head>
+<body>
+
+<nav class="shelf" aria-label="Hovedmenu">
+  <a class="logo" href="index.html">PLC</a>
+  <a class="spine s-forside" href="index.html">Forside</a>
+  <a class="spine s-laeremidler" href="laeremidler.html">Læremidler</a>
+  <a class="spine s-vejledninger" href="vejledninger.html">Vejledninger</a>
+  <a class="spine s-arkiv active" href="arkiv.html">Arkiv</a>
+</nav>
+
+<div class="wrap">
+
+<header class="hero">
+  <span class="kicker">Arkiv</span>
+  <h1 class="display">Alle fag.<br>Hver sin farve.</h1>
+  <p class="lede">Hele arkivet af forløb og materialer, sorteret efter fag. Skriv i feltet, og listen indsnævres mens du taster.</p>
+</header>
+
+<div class="search">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+  <input id="fag-search" type="text" placeholder="Søg efter fag … fx dansk, fysik, musik" aria-label="Søg efter fag">
+</div>
+
+<div class="fag-grid">
+  <a class="fag reveal" href="#" style="--c:#1D9E75"><b>Dansk</b><small>Litteratur · skrivning · grammatik</small></a>
+  <a class="fag reveal" href="#" style="--c:#D85A30"><b>Matematik</b><small>Tal · geometri · problemløsning</small></a>
+  <a class="fag reveal" href="#" style="--c:#534AB7"><b>Engelsk</b><small>Sprog · kultur · kommunikation</small></a>
+  <a class="fag reveal" href="#" style="--c:#993556"><b>Tysk</b><small>Nabosprog · grænseland</small></a>
+  <a class="fag reveal" href="#" style="--c:#185FA5"><b>Samfundsfag</b><small>Demokrati · medier · økonomi</small></a>
+  <a class="fag reveal" href="#" style="--c:#854F0B"><b>Kristendomskundskab</b><small>Tro · etik · livsspørgsmål</small></a>
+  <a class="fag reveal" href="#" style="--c:#993C1D"><b>Historie</b><small>Kilder · kronologi · fortællinger</small></a>
+  <a class="fag reveal" href="#" style="--c:#3B6D11"><b>Natur/teknologi</b><small>Undersøgelser · natur · teknik</small></a>
+  <a class="fag reveal" href="#" style="--c:#0C447C"><b>Fysik/kemi</b><small>Forsøg · stoffer · energi</small></a>
+  <a class="fag reveal" href="#" style="--c:#0F6E56"><b>Geografi</b><small>Verden · klima · kort</small></a>
+  <a class="fag reveal" href="#" style="--c:#639922"><b>Biologi</b><small>Liv · krop · økosystemer</small></a>
+  <a class="fag reveal" href="#" style="--c:#D4537E"><b>Billedkunst</b><small>Udtryk · analyse · værksted</small></a>
+  <a class="fag reveal" href="#" style="--c:#A32D2D"><b>Håndværk og design</b><small>Materialer · proces · produkt</small></a>
+  <a class="fag reveal" href="#" style="--c:#7F77DD"><b>Musik</b><small>Sang · sammenspil · skabelse</small></a>
+  <a class="fag reveal" href="#" style="--c:#BA7517"><b>Madkundskab</b><small>Råvarer · sundhed · madmod</small></a>
+  <a class="fag reveal" href="#" style="--c:#E24B4A"><b>Idræt / Sundhed / Bevægelse</b><small>Krop · leg · trivsel</small></a>
+  <a class="fag reveal" href="#" style="--c:#5F5E5A"><b>Didaktik</b><small>Planlægning · evaluering</small></a>
+  <a class="fag reveal" href="#" style="--c:#085041"><b>Digital dannelse</b><small>Adfærd · kildekritik · etik</small></a>
+  <a class="fag reveal" href="#" style="--c:#72243E"><b>DSA</b><small>Dansk som andetsprog</small></a>
+  <a class="fag reveal" href="#" style="--c:#26215C"><b>Teknologiforståelse</b><small>Kodning · design · dømmekraft</small></a>
+</div>
+
+</div>
+
+<footer>
+  <div class="cols">
+    <div>
+      <h4>PLC Sønderborg</h4>
+      <a href="index.html">Forside</a>
+      <a href="laeremidler.html">Læremidler</a>
+      <a href="vejledninger.html">Vejledninger</a>
+      <a href="arkiv.html">Arkiv</a>
+    </div>
+    <div>
+      <h4>Genveje</h4>
+      <a href="https://www.aula.dk"><span class="dot" style="background:#1D9E75"></span>Aula</a>
+      <a href="https://kviklogin.dk"><span class="dot" style="background:#D85A30"></span>Kviklogin</a>
+      <a href="https://app.meebook.com"><span class="dot" style="background:#534AB7"></span>MeeBook</a>
+    </div>
+    <div>
+      <h4>Bibliotek</h4>
+      <a href="https://ereolen.dk"><span class="dot" style="background:#BA7517"></span>eReolen</a>
+      <a href="https://nota.dk"><span class="dot" style="background:#D4537E"></span>Nota</a>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
